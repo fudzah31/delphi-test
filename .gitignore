@@ -1,0 +1,13 @@
+# Delphi build files
+*.exe
+*.dll
+*.dcu
+*.~*
+*.local
+*.identcache
+*.dproj.local
+*.tvsconfig
+__history/
+__recovery/
+Win32/
+Win64/
