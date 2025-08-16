@@ -1,0 +1,126 @@
+unit ULat1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, System.Rtti, System.Bindings.Outputs,
+  Vcl.Bind.Editors, Data.Bind.EngExt, Vcl.Bind.DBEngExt, Data.DB, Vcl.Buttons,
+  Vcl.ToolWin, Vcl.ComCtrls, Data.Bind.Components, Vcl.Grids, Vcl.DBGrids,
+  Data.Bind.DBScope, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls, Data.Win.ADODB;
+
+type
+  TForm1 = class(TForm)
+    ADOConnection1: TADOConnection;
+    pasien: TADOQuery;
+    DataSource1: TDataSource;
+    pasienNIK: TIntegerField;
+    pasienNama: TStringField;
+    pasienTempatLahir: TStringField;
+    pasienTglLahir: TDateField;
+    pasienJenisKelamin: TStringField;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    Label5: TLabel;
+    ComboBox1: TComboBox;
+    BindSourceDB1: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    LinkFillControlToField1: TLinkFillControlToField;
+    DBGrid1: TDBGrid;
+    DateTimePicker1: TDateTimePicker;
+    LinkControlToField1: TLinkControlToField;
+    Label6: TLabel;
+    ToolBar1: TToolBar;
+    Tutup: TSpeedButton;
+    Batal: TSpeedButton;
+    Hapus: TSpeedButton;
+    Ubah: TSpeedButton;
+    Simpan: TSpeedButton;
+    Baru: TSpeedButton;
+    procedure BaruClick(Sender: TObject);
+    procedure SimpanClick(Sender: TObject);
+    procedure UbahClick(Sender: TObject);
+    procedure HapusClick(Sender: TObject);
+    procedure BatalClick(Sender: TObject);
+    procedure TutupClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.BaruClick(Sender: TObject);
+begin
+    Baru.Enabled:=False;
+    Simpan.Enabled:=True;
+Ubah.Enabled:=False;
+Hapus.Enabled:=False;
+Batal.Enabled:=True;
+Tutup.Enabled:=False;
+pasien.Insert;
+
+
+end;
+
+procedure TForm1.BatalClick(Sender: TObject);
+begin
+Baru.Enabled:=True;
+Simpan.Enabled:=False;
+Ubah.Enabled:=True;
+Hapus.Enabled:=True;
+Batal.Enabled:=False;
+Tutup.Enabled:=True;
+pasien.Cancel;
+
+end;
+
+procedure TForm1.HapusClick(Sender: TObject);
+begin
+   pasien.Delete;
+
+end;
+
+procedure TForm1.SimpanClick(Sender: TObject);
+begin
+Baru.Enabled:=True;
+Simpan.Enabled:=False;
+Ubah.Enabled:=True;
+Hapus.Enabled:=True;
+Batal.Enabled:=False;
+Tutup.Enabled:=True;
+pasien.Post;
+
+end;
+
+
+procedure TForm1.TutupClick(Sender: TObject);
+begin
+application.Terminate;
+
+end;
+
+procedure TForm1.UbahClick(Sender: TObject);
+begin
+Baru.Enabled:=True;
+Simpan.Enabled:=False;
+Ubah.Enabled:=True;
+Hapus.Enabled:=True;
+Batal.Enabled:=False;
+Tutup.Enabled:=False;
+pasien.Edit;
+
+end;
+
+end.

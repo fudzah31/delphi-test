@@ -1,0 +1,58 @@
+unit ULat1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, System.Rtti, System.Bindings.Outputs,
+  Vcl.Bind.Editors, Data.Bind.EngExt, Vcl.Bind.DBEngExt, Data.DB, Vcl.Buttons,
+  Vcl.ToolWin, Vcl.ComCtrls, Data.Bind.Components, Vcl.Grids, Vcl.DBGrids,
+  Data.Bind.DBScope, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls, Data.Win.ADODB;
+
+type
+  TForm1 = class(TForm)
+    ADOConnection1: TADOConnection;
+    pasien: TADOQuery;
+    DataSource1: TDataSource;
+    pasienNIK: TIntegerField;
+    pasienNama: TStringField;
+    pasienTempatLahir: TStringField;
+    pasienTglLahir: TDateField;
+    pasienJenisKelamin: TStringField;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    Label5: TLabel;
+    ComboBox1: TComboBox;
+    BindSourceDB1: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    LinkFillControlToField1: TLinkFillControlToField;
+    DBGrid1: TDBGrid;
+    DateTimePicker1: TDateTimePicker;
+    LinkControlToField1: TLinkControlToField;
+    Label6: TLabel;
+    ToolBar1: TToolBar;
+    tutup: TSpeedButton;
+    batal: TSpeedButton;
+    hapus: TSpeedButton;
+    ubah: TSpeedButton;
+    simpan: TSpeedButton;
+    baru: TSpeedButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+end.
