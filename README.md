@@ -1,16 +1,16 @@
 # 🖥️ Delphi Test  
 
-> A simple Delphi playground project  
-> created for learning and exploring basic concepts.  
+> A simple Delphi (Object Pascal) project  
+> built for learning and exploring basic programming concepts.  
 
 ---
 
 ## 📌 About  
 
-This project is used as a practice space to learn **Delphi / Object Pascal**.  
-It contains basic experiments with forms, components, and simple logic.  
+This project is a practice space to understand the basics of **Delphi development**,  
+including form design, components, and simple application logic.  
 
-Still in early learning stage, so the code is not perfect and continues to be improved.  
+Currently still in the learning stage and being improved over time.  
 
 ---
 
@@ -26,20 +26,20 @@ Still in early learning stage, so the code is not perfect and continues to be im
 - `.pas` → source code  
 - `.dfm` → form design  
 - `.dpr` → main project file  
-- `.gitignore` → ignore unnecessary files  
+- `.gitignore` → exclude unnecessary files  
 
 ---
 
 ## ⚠️ Current Status  
 
 This is a beginner project.  
-Some parts may not be optimal and there might be bugs.  
+Some parts may not be optimal and bugs may still exist.  
 
 ---
 
 ## 🌱 Note  
 
-Created as part of the learning process.  
-Focused on understanding the basics step by step.  
+Built as part of the learning process,  
+focused on understanding concepts step by step.  
 
 > learning by doing.
